@@ -1,3 +1,9 @@
 import React from "react"
 
-export default () => <div>Hello world!</div>
+import Header from "../components/Header"
+
+export default () => (
+  <div>
+    <Header />
+  </div>
+)
