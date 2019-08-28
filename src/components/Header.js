@@ -4,6 +4,7 @@ import styled from "styled-components"
 const MyHeader = styled.header`
   z-index: 5;
   padding-top: 16px;
+  margin-bottom: 64px;
 `
 const Container = styled.div`
   padding-right: 15px;
