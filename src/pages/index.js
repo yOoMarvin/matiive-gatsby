@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import MaterialIcon from 'material-icons-react';
 
 import Header from "../components/Header"
+import MaterialIcon from "../components/MaterialIcon"
 
 const Content = styled.div`
   padding: 15px;
@@ -74,14 +74,14 @@ class Index extends React.Component {
             </Text>
             <Left>
               <DetailContainer>
-                <MaterialIcon icon="assignment_turned_in" size={40} />
+                <MaterialIcon icon="assignment_turned_in" size="40px" />
                 <DetailTextContainer>
                   <DetailTitle>Excellent coverage</DetailTitle>
                   <DetailText>Outstanding rated tarif options</DetailText>
                 </DetailTextContainer>
               </DetailContainer>
               <DetailContainer>
-                <MaterialIcon icon="account_balance_wallet" size={40} />
+                <MaterialIcon icon="account_balance_wallet" size="40px" />
                 <DetailTextContainer>
                   <DetailTitle>High savings potential</DetailTitle>
                   <DetailText>Cheap fees</DetailText>
@@ -90,14 +90,14 @@ class Index extends React.Component {
             </Left>
             <Right>
               <DetailContainer>
-                <MaterialIcon icon="access_time" size={40} />
+                <MaterialIcon icon="access_time" size="40px" />
                 <DetailTextContainer>
                   <DetailTitle>Maximum time savings</DetailTitle>
                   <DetailText>100% digital services</DetailText>
                 </DetailTextContainer>
               </DetailContainer>
               <DetailContainer>
-                <MaterialIcon icon="account_balance" size={40} />
+                <MaterialIcon icon="account_balance" size="40px" />
                 <DetailTextContainer>
                   <DetailTitle>Stable fees</DetailTitle>
                   <DetailText>Future proof calculation</DetailText>
