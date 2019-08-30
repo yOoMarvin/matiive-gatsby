@@ -32,6 +32,9 @@ const HeaderLink = styled.a`
   padding-right: 15px;
   padding-left: 15px;
   text-decoration: none;
+  &:hover {
+    color: #3c414b;
+  }
 `
 
 class Header extends React.Component {

@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import MaterialIcon from 'material-icons-react';
 
 import Header from "../components/Header"
 
@@ -24,6 +25,39 @@ const TitleImage = styled.img`
   border-radius: 13px;
   width: 440px;
 `
+const DetailContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  margin-top: 30px;
+`
+const DetailTextContainer = styled.div`
+  margin-left: 10px;
+`
+const DetailTitle = styled.p`
+  font-size: 14px;
+  color: #3c414b;
+  font-weight: bold;
+  line-height: 0px;
+`
+const DetailText = styled.p`
+  font-size: 12px;
+  line-height: 8px;
+`
+const Button = styled.button`
+  background-color: #0C81F6;
+  border-radius: 8px;
+  padding: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+  color: white;
+  font-size: 14px;
+  margin-top: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+`
 
 class Index extends React.Component {
   render() {
@@ -38,6 +72,39 @@ class Index extends React.Component {
               is your first fully digital insurance that really makes your life
               easier!
             </Text>
+            <Left>
+              <DetailContainer>
+                <MaterialIcon icon="assignment_turned_in" size={40} />
+                <DetailTextContainer>
+                  <DetailTitle>Excellent coverage</DetailTitle>
+                  <DetailText>Outstanding rated tarif options</DetailText>
+                </DetailTextContainer>
+              </DetailContainer>
+              <DetailContainer>
+                <MaterialIcon icon="account_balance_wallet" size={40} />
+                <DetailTextContainer>
+                  <DetailTitle>High savings potential</DetailTitle>
+                  <DetailText>Cheap fees</DetailText>
+                </DetailTextContainer>
+              </DetailContainer>
+            </Left>
+            <Right>
+              <DetailContainer>
+                <MaterialIcon icon="access_time" size={40} />
+                <DetailTextContainer>
+                  <DetailTitle>Maximum time savings</DetailTitle>
+                  <DetailText>100% digital services</DetailText>
+                </DetailTextContainer>
+              </DetailContainer>
+              <DetailContainer>
+                <MaterialIcon icon="account_balance" size={40} />
+                <DetailTextContainer>
+                  <DetailTitle>Stable fees</DetailTitle>
+                  <DetailText>Future proof calculation</DetailText>
+                </DetailTextContainer>
+              </DetailContainer>
+            </Right>
+            <Button>Discover now!</Button>
           </Left>
           <Right>
             <TitleImage src={"titleimage.png"} alt="Title Image" />
