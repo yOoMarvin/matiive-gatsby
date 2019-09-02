@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import Header from "../components/Header"
 import MaterialIcon from "../components/MaterialIcon"
@@ -104,7 +105,9 @@ class Index extends React.Component {
                 </DetailTextContainer>
               </DetailContainer>
             </Right>
-            <Button>Discover now!</Button>
+            <OutboundLink href="/temp">
+              <Button>Discover now!</Button>
+            </OutboundLink>
           </Left>
           <Right>
             <TitleImage src={"titleimage.png"} alt="Title Image" />
