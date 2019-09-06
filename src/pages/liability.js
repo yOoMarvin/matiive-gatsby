@@ -17,7 +17,7 @@ class Liability extends React.Component {
           info1="Up to € 50 million coverage "
           info2="Key loss included"
           info3="Worldwide protection"
-          info4="Up to € 50 million coverage"
+          info4="Fast help with excellent support and customer service"
           image="liability.png"
         />
       </div>

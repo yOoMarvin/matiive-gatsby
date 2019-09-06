@@ -19,6 +19,7 @@ const SubTitle = styled.p`
 `
 const Fat = styled.p`
   font-weight: bold;
+  width: 420px;
 `
 const Left = styled.div`
   float: left;
