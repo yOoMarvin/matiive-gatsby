@@ -18,7 +18,7 @@ class Liability extends React.Component {
           info2="Key loss included"
           info3="Worldwide protection"
           info4="Fast help with excellent support and customer service"
-          image="liability.png"
+          image="/liability.png"
         />
       </div>
     )

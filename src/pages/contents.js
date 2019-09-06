@@ -18,7 +18,7 @@ class Contents extends React.Component {
           info2="Damage due to burglary"
           info3="Damage caused by tap water"
           info4=" Individually expandable"
-          image="contents.png"
+          image="/contents.png"
         />
       </div>
     )
