@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import Header from "../components/Header"
 import MaterialIcon from "../components/MaterialIcon"
@@ -48,7 +48,7 @@ const DetailText = styled.p`
   line-height: 8px;
 `
 const Button = styled.button`
-  background-color: #0C81F6;
+  background-color: #0c81f6;
   border-radius: 8px;
   padding: 50px;
   padding-top: 10px;
@@ -105,7 +105,7 @@ class Index extends React.Component {
                 </DetailTextContainer>
               </DetailContainer>
             </Right>
-            <OutboundLink href="/temp">
+            <OutboundLink href="/overview">
               <Button>Discover now!</Button>
             </OutboundLink>
           </Left>
