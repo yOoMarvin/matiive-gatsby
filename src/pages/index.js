@@ -23,10 +23,6 @@ const Title = styled.h1`
 const Text = styled.p`
   font-size: 18px;
 `
-const TitleImage = styled.img`
-  border-radius: 13px;
-  width: 440px;
-`
 const DetailContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -125,7 +121,7 @@ class Index extends React.Component {
             </OutboundLink>
           </Left>
           <Right>
-            <TitleImage src={"titleimage.png"} alt="Title Image" />
+            <img src={"titleimage.png"} alt="Title Image" />
           </Right>
         </Content>
       </div>
