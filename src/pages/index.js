@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
+import CookieConsent, { Cookies } from "react-cookie-consent"
 
 import Header from "../components/Header"
 import MaterialIcon from "../components/MaterialIcon"
@@ -64,6 +65,20 @@ class Index extends React.Component {
   render() {
     return (
       <div>
+        <CookieConsent
+          location="bottom"
+          buttonText="Okay"
+          buttonStyle={{
+            backgroundColor: "#0C81F6",
+            color: "white",
+            fontSize: "14px",
+            borderRadius: "3px",
+          }}
+        >
+          By using this website you agree that cookies are used to increase user
+          experience <span role="img">🍪</span>
+          <a href="/disclaimer">Find out more.</a>
+        </CookieConsent>
         <Header />
         <Content>
           <Left>
