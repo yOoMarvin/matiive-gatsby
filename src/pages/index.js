@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
-import CookieConsent, { Cookies } from "react-cookie-consent"
+import CookieConsent from "react-cookie-consent"
 
 import Header from "../components/Header"
 import MaterialIcon from "../components/MaterialIcon"
@@ -55,6 +55,9 @@ const Button = styled.button`
   font-size: 14px;
   margin-top: 50px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  &:hover {
+    cursor: pointer;
+  }
 `
 
 class Index extends React.Component {
@@ -121,7 +124,7 @@ class Index extends React.Component {
             </OutboundLink>
           </Left>
           <Right>
-            <img src={"titleimage.png"} alt="Title Image" />
+            <img src={"titleimage.png"} alt="Title" />
           </Right>
         </Content>
       </div>
