@@ -16,7 +16,7 @@ const Page = styled.div`
 const Title = styled.h1`
   font-size: 36px;
   text-align: center;
-  margin: 3em 0 3em 0;
+  margin: 3em 0 1em 0;
 `
 
 class Contents extends React.Component {
