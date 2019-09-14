@@ -9,6 +9,12 @@ const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
 `
+const Content = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+`
+
 const Title = styled.h1`
   font-size: 48px;
   text-align: center;
@@ -22,12 +28,10 @@ const Fat = styled.p`
   width: 420px;
 `
 const Left = styled.div`
-  float: left;
-  margin-left: 10%;
+  width: 50%;
 `
 const Right = styled.div`
-  float: right;
-  margin-right: 10%;
+  width: 30%;
 `
 const DetailContainer = styled.div`
   display: flex;
@@ -51,32 +55,34 @@ class ProductInfo extends React.Component {
       <Container>
         <Title>{this.props.title}</Title>
         <SubTitle>{this.props.subtitle}</SubTitle>
-        <Left>
-          <h1>Our promise.</h1>
-          <Fat>{this.props.price}</Fat>
-          <Fat>{this.props.about}</Fat>
-          <DetailContainer>
-            <Row>
-              <MaterialIcon icon="check_circle_outline" size="30px" />
-              <Text>{this.props.info1}</Text>
-            </Row>
-            <Row>
-              <MaterialIcon icon="check_circle_outline" size="30px" />
-              <Text>{this.props.info2} </Text>
-            </Row>
-            <Row>
-              <MaterialIcon icon="check_circle_outline" size="30px" />
-              <Text>{this.props.info3} </Text>
-            </Row>
-            <Row>
-              <MaterialIcon icon="check_circle_outline" size="30px" />
-              <Text>{this.props.info4}</Text>
-            </Row>
-          </DetailContainer>
-        </Left>
-        <Right>
-          <img src={this.props.image} alt="Liability Insurance" />
-        </Right>
+        <Content>
+          <Left>
+            <h1>Our promise.</h1>
+            <Fat>{this.props.price}</Fat>
+            <Fat>{this.props.about}</Fat>
+            <DetailContainer>
+              <Row>
+                <MaterialIcon icon="check_circle_outline" size="30px" />
+                <Text>{this.props.info1}</Text>
+              </Row>
+              <Row>
+                <MaterialIcon icon="check_circle_outline" size="30px" />
+                <Text>{this.props.info2} </Text>
+              </Row>
+              <Row>
+                <MaterialIcon icon="check_circle_outline" size="30px" />
+                <Text>{this.props.info3} </Text>
+              </Row>
+              <Row>
+                <MaterialIcon icon="check_circle_outline" size="30px" />
+                <Text>{this.props.info4}</Text>
+              </Row>
+            </DetailContainer>
+          </Left>
+          <Right>
+            <img src={this.props.image} alt="Liability Insurance" />
+          </Right>
+        </Content>
       </Container>
     )
   }
