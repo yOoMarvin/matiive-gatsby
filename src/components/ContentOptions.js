@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import TarifOption from "./TarifOption"
+import ContentNudge from "./ContentNudge"
 
 const Container = styled.div`
   display: flex;
@@ -45,6 +46,7 @@ class ContentOptions extends React.Component {
           row7="Fraud in online banking up to 1000 €"
           price="14,20 €"
         />
+        <ContentNudge />
       </Container>
     )
   }
