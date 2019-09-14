@@ -32,25 +32,37 @@ const Label = styled.span`
 class LiabilityData extends React.Component {
   constructor() {
     super()
-
     this.state = {
       person: "family",
-      living: "rent",
+      living: "property",
     }
 
     this.handlePersonChange = this.handlePersonChange.bind(this)
     this.handleLivingChange = this.handleLivingChange.bind(this)
   }
+
   handlePersonChange(event) {
-    this.setState({
-      person: event.target.value,
-    })
+    this.setState(
+      {
+        person: event.target.value,
+      },
+      () => {
+        this.props.callbackFromParent(this.state)
+      }
+    )
   }
+
   handleLivingChange(event) {
-    this.setState({
-      living: event.target.value,
-    })
+    this.setState(
+      {
+        living: event.target.value,
+      },
+      () => {
+        this.props.callbackFromParent(this.state)
+      }
+    )
   }
+
   render() {
     return (
       <Container>
