@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Header from "../components/Header"
 import ProductInfo from "../components/ProductInfo"
 import LiabilityOptions from "../components/LiabilityOptions"
+import LiabilityData from "../components/LiabilityData"
 
 const Page = styled.div`
   display: flex;
@@ -16,7 +17,7 @@ const Page = styled.div`
 const Title = styled.h1`
   font-size: 36px;
   text-align: center;
-  margin: 3em 0 3em 0;
+  margin: 3em 0 1em 0;
 `
 
 class Liability extends React.Component {
@@ -41,6 +42,11 @@ class Liability extends React.Component {
               Our private liability insurnace at a glance. <br />
               Excellent protection. Suitable for you.
             </Title>
+            <LiabilityData />
+            <h4 style={{ textAlign: "center", marginBottom: "2em" }}>
+              Based on your data, our algorithms will give a recommendation for
+              your best coverage
+            </h4>
             <LiabilityOptions />
           </div>
         </Page>
