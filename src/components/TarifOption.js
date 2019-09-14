@@ -8,30 +8,45 @@ const Container = styled.div`
   flex-direction: column;
   text-align: center;
   border-radius: 3px;
-  border: 1px solid #c4c4c4;
-  padding: 1em 0 1em 0;
+  border: 2px solid #c4c4c4;
+  padding: 1em 1em 1.5em 1em;
+  width: 22em;
+  margin-bottom: 3em;
 `
 const Title = styled.h3`
   line-height: 0;
   padding-bottom: 0;
   margin-bottom: 0;
 `
-const TopRow = styled.div`
-  margin-bottom: 1em;
+const Description = styled.div`
+  margin-left: 1em;
 `
+const TopRow = styled.div``
 const DarkRow = styled.div`
   border-top: 1px solid #c4c4c4;
   border-bottom: 1px solid #c4c4c4;
   background-color: #f2f2f2;
   padding: 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 `
 const LightRow = styled.div`
   padding: 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 `
 const Price = styled.div`
   margin-top: 1em;
   font-weight: bold;
   font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  bottom: 0;
 `
 const Button = styled.button`
   background-color: #0c81f6;
@@ -54,19 +69,98 @@ class TarifOption extends React.Component {
     return (
       <Container>
         <TopRow>
-          <img src="/contents-basic.png" alt="contents basic" />
-          <Title>Economy Class</Title>
-          <p>matiive basic</p>
-          <MaterialIcon icon="check_circle" size="30px" />
+          <img src={this.props.image} alt="contents" />
+          <Title>{this.props.title}</Title>
+          <p>{this.props.subtitle}</p>
         </TopRow>
-        <DarkRow>1000 €</DarkRow>
-        <LightRow> 1000 €</LightRow>
-        <DarkRow>
-          1000 € <br /> but there might be a problem
-        </DarkRow>
-        <LightRow>-</LightRow>
-        <DarkRow>-</DarkRow>
-        <Price>7,50 €</Price>
+
+        {this.props.row1 ? (
+          <LightRow>
+            <MaterialIcon icon="check" size="20px" color="#0C81F6" />
+            <Description>{this.props.row1}</Description>
+          </LightRow>
+        ) : (
+          <LightRow>
+            <MaterialIcon icon="check" size="20px" color="white" />
+            <Description> </Description>
+          </LightRow>
+        )}
+
+        {this.props.row2 ? (
+          <LightRow>
+            <MaterialIcon icon="check" size="20px" color="#0C81F6" />
+            <Description>{this.props.row2}</Description>
+          </LightRow>
+        ) : (
+          <LightRow>
+            <MaterialIcon icon="check" size="20px" color="white" />
+            <Description> </Description>
+          </LightRow>
+        )}
+
+        {this.props.row3 ? (
+          <LightRow>
+            <MaterialIcon icon="check" size="20px" color="#0C81F6" />
+            <Description>{this.props.row3}</Description>
+          </LightRow>
+        ) : (
+          <LightRow>
+            <MaterialIcon icon="check" size="20px" color="white" />
+            <Description> </Description>
+          </LightRow>
+        )}
+
+        {this.props.row4 ? (
+          <LightRow>
+            <MaterialIcon icon="check" size="20px" color="#0C81F6" />
+            <Description>{this.props.row4}</Description>
+          </LightRow>
+        ) : (
+          <LightRow>
+            <MaterialIcon icon="check" size="20px" color="white" />
+            <Description> </Description>
+          </LightRow>
+        )}
+
+        {this.props.row5 ? (
+          <LightRow>
+            <MaterialIcon icon="check" size="20px" color="#0C81F6" />
+            <Description>{this.props.row5}</Description>
+          </LightRow>
+        ) : (
+          <LightRow>
+            <MaterialIcon icon="check" size="20px" color="white" />
+            <Description> </Description>
+          </LightRow>
+        )}
+
+        {this.props.row6 ? (
+          <LightRow>
+            <MaterialIcon icon="check" size="20px" color="#0C81F6" />
+            <Description>{this.props.row6}</Description>
+          </LightRow>
+        ) : (
+          <LightRow>
+            <MaterialIcon icon="check" size="20px" color="white" />
+            <Description> </Description>
+          </LightRow>
+        )}
+
+        {this.props.row7 ? (
+          <LightRow>
+            <MaterialIcon icon="check" size="20px" color="#0C81F6" />
+            <Description>{this.props.row7}</Description>
+          </LightRow>
+        ) : (
+          <LightRow>
+            <MaterialIcon icon="check" size="20px" color="white" />
+            <Description> </Description>
+          </LightRow>
+        )}
+
+        <Price>
+          {this.props.price} <span style={{ fontSize: "10px" }}>per month</span>
+        </Price>
         <Button>Finish now.</Button>
       </Container>
     )
