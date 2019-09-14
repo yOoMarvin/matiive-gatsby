@@ -69,7 +69,7 @@ class TarifOption extends React.Component {
     return (
       <Container>
         <TopRow>
-          <img src={this.props.image} alt="contents" />
+          <img src={this.props.image} alt="option" />
           <Title>{this.props.title}</Title>
           <p>{this.props.subtitle}</p>
         </TopRow>

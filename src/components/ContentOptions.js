@@ -30,8 +30,8 @@ class ContentOptions extends React.Component {
         />
         <TarifOption
           image="/contents-comfort.png"
-          title="Economy Class"
-          subtitle="matiive basic"
+          title="Business Class"
+          subtitle="matiive comfort"
           row1="Elementary damages"
           row2="Burglary and robbery"
           row3="Overvoltage damage"
@@ -43,8 +43,8 @@ class ContentOptions extends React.Component {
 
           <TarifOption
             image="/contents-top.png"
-            title="Economy Class"
-            subtitle="matiive basic"
+            title="First Class"
+            subtitle="matiive top"
             row1="Elementary damages"
             row2="Burglary and robbery"
             row3="Overvoltage damage"
