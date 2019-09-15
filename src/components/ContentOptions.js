@@ -38,7 +38,7 @@ class ContentOptions extends React.Component {
           row3="Overvoltage damage"
           row4="Bicycle theft up to 500 €"
           price="9,70 €"
-          inkparameter="contents-comfort"
+          linkparameter="contents-comfort"
         />
         <Nudge>
           <ContentNudge />
@@ -55,7 +55,7 @@ class ContentOptions extends React.Component {
             row6="Simple theft up to 2000 €"
             row7="Fraud in online banking up to 1000 €"
             price="14,20 €"
-            inkparameter="contents-top"
+            linkparameter="contents-top"
           />
         </Nudge>
       </Container>
