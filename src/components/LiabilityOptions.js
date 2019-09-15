@@ -34,7 +34,7 @@ class LiabilityOptions extends React.Component {
             row3="Construction work - 50.000€"
             row4="Deposit payment abroad - 50.000€"
             price="3,50 €"
-            linkparameter="liability-basic&nudge=false"
+            linkparameter="option=liability-basic&nudge=false"
           />
         </Nudge>
         <Nudge>
@@ -48,7 +48,7 @@ class LiabilityOptions extends React.Component {
             row4="Deposit payment abroad - 100.000€"
             row5="co-insured children - 15.000€"
             price="4,70 €"
-            linkparameter="liability-comfort&nudge=false"
+            linkparameter="option=liability-comfort&nudge=false"
           />
         </Nudge>
         <Nudge>
@@ -66,7 +66,7 @@ class LiabilityOptions extends React.Component {
             row5="co-insured children - 50.000€"
             row6="Damage to foreign things - 30.000€"
             price="6,20 €"
-            linkparameter="liability-top&nudge=false"
+            linkparameter="option=liability-top&nudge=false"
           />
         </Nudge>
       </Container>
