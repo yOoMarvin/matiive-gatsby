@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import MaterialIcon from "../components/MaterialIcon"
 
@@ -161,7 +162,9 @@ class TarifOption extends React.Component {
         <Price>
           {this.props.price} <span style={{ fontSize: "10px" }}>per month</span>
         </Price>
-        <Button>Finish now.</Button>
+        <OutboundLink href={"/final?" + this.props.linkparameter}>
+          <Button>Finish now</Button>
+        </OutboundLink>
       </Container>
     )
   }

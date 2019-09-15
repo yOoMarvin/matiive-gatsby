@@ -27,6 +27,7 @@ class ContentOptions extends React.Component {
           row1="Elementary damages"
           row2="Burglary and robbery"
           price="7,50 €"
+          linkparameter="contents-basic"
         />
         <TarifOption
           image="/contents-comfort.png"
@@ -37,6 +38,7 @@ class ContentOptions extends React.Component {
           row3="Overvoltage damage"
           row4="Bicycle theft up to 500 €"
           price="9,70 €"
+          inkparameter="contents-comfort"
         />
         <Nudge>
           <ContentNudge />
@@ -53,6 +55,7 @@ class ContentOptions extends React.Component {
             row6="Simple theft up to 2000 €"
             row7="Fraud in online banking up to 1000 €"
             price="14,20 €"
+            inkparameter="contents-top"
           />
         </Nudge>
       </Container>
