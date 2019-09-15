@@ -48,6 +48,21 @@ const Row = styled.div`
 const Text = styled.p`
   margin-left: 20px;
 `
+const Button = styled.button`
+  background-color: #0c81f6;
+  border-radius: 8px;
+  padding: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+  color: white;
+  font-size: 14px;
+  margin-top: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  &:hover {
+    cursor: pointer;
+  }
+`
 
 class ProductInfo extends React.Component {
   render() {
@@ -78,6 +93,7 @@ class ProductInfo extends React.Component {
                 <Text>{this.props.info4}</Text>
               </Row>
             </DetailContainer>
+            <Button>Check out the options!</Button>
           </Left>
           <Right>
             <img src={this.props.image} alt="Liability Insurance" />

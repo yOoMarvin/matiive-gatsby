@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import ReactDOM from "react-dom"
 
 import Header from "../components/Header"
 import ProductInfo from "../components/ProductInfo"
@@ -57,7 +58,7 @@ class Liability extends React.Component {
               Based on your data, our algorithms will give a recommendation for
               your best coverage
             </h4>
-            <LiabilityOptions userData={this.state} />
+            <LiabilityOptions userData={this.state} ref="liability-options" />
           </div>
         </Page>
       </div>
