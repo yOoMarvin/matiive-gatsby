@@ -22,7 +22,9 @@ class LiabilityOptions extends React.Component {
     return (
       <Container>
         <Nudge>
-          {this.props.userData.person === "single" ? <LiabilityNudge /> : null}
+          {
+            //this.props.userData.person === "single" ? <LiabilityNudge /> : null
+          }
           <TarifOption
             image="/liability-basic.png"
             title="Economy Class"
@@ -32,7 +34,7 @@ class LiabilityOptions extends React.Component {
             row3="Construction work - 50.000€"
             row4="Deposit payment abroad - 50.000€"
             price="3,50 €"
-            linkparameter="liability-basic&nudge=true"
+            linkparameter="liability-basic&nudge=false"
           />
         </Nudge>
         <Nudge>
@@ -46,11 +48,13 @@ class LiabilityOptions extends React.Component {
             row4="Deposit payment abroad - 100.000€"
             row5="co-insured children - 15.000€"
             price="4,70 €"
-            linkparameter="liability-comfort&nudge=true"
+            linkparameter="liability-comfort&nudge=false"
           />
         </Nudge>
         <Nudge>
-          {this.props.userData.person === "family" ? <LiabilityNudge /> : null}
+          {
+            //this.props.userData.person === "family" ? <LiabilityNudge /> : null
+          }
           <TarifOption
             image="/liability-top.png"
             title="First Class"
@@ -62,7 +66,7 @@ class LiabilityOptions extends React.Component {
             row5="co-insured children - 50.000€"
             row6="Damage to foreign things - 30.000€"
             price="6,20 €"
-            linkparameter="liability-top&nudge=true"
+            linkparameter="liability-top&nudge=false"
           />
         </Nudge>
       </Container>
