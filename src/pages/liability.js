@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import ReactDOM from "react-dom"
 
 import Header from "../components/Header"
 import ProductInfo from "../components/ProductInfo"
@@ -12,8 +11,6 @@ const Page = styled.div`
   flex-direction: column;
   padding-right: 15px;
   padding-left: 15px;
-  margin-left: auto;
-  margin-right: auto;
 `
 const Title = styled.h1`
   font-size: 36px;

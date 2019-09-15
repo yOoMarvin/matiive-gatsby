@@ -9,12 +9,11 @@ const MyHeader = styled.header`
 const Container = styled.div`
   padding-right: 15px;
   padding-left: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 `
-const Left = styled.div`
-  float: left;
-`
+const Left = styled.div``
 const Title = styled.a`
   margin 0;
   line-hight: 16px;
@@ -24,9 +23,7 @@ const Title = styled.a`
   color: #3C414B;
 `
 const Right = styled.div`
-  float: right;
   padding-top: 8px;
-  margin-right: 10%;
 `
 const HeaderLink = styled.a`
   padding-right: 15px;
@@ -48,8 +45,6 @@ class Header extends React.Component {
           <Right>
             <HeaderLink href="/liability">Liability</HeaderLink>
             <HeaderLink href="/contents">Contents</HeaderLink>
-            <HeaderLink href="/bike">Bike</HeaderLink>
-            <HeaderLink href="/cyber">Cyber</HeaderLink>
           </Right>
         </Container>
       </MyHeader>

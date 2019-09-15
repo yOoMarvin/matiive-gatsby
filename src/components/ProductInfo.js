@@ -3,20 +3,16 @@ import styled from "styled-components"
 
 import MaterialIcon from "../components/MaterialIcon"
 
-const Container = styled.div`
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-left: auto;
-  margin-right: auto;
-`
+const Container = styled.div``
 const Content = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  flex-wrap: nowrap;
 `
 
 const Title = styled.h1`
-  font-size: 48px;
+  font-size: 3em;
   text-align: center;
 `
 const SubTitle = styled.p`
@@ -25,13 +21,13 @@ const SubTitle = styled.p`
 `
 const Fat = styled.p`
   font-weight: bold;
-  width: 420px;
 `
-const Left = styled.div`
-  width: 50%;
-`
-const Right = styled.div`
-  width: 30%;
+const Left = styled.div``
+const Right = styled.div``
+const Image = styled.img`
+  @media (max-width: 850px) {
+    display: none;
+  }
 `
 const DetailContainer = styled.div`
   display: flex;
@@ -96,7 +92,7 @@ class ProductInfo extends React.Component {
             <Button>Check out the options!</Button>
           </Left>
           <Right>
-            <img src={this.props.image} alt="Liability Insurance" />
+            <Image src={this.props.image} alt="Liability Insurance" />
           </Right>
         </Content>
       </Container>

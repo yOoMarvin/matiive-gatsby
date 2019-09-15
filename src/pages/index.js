@@ -8,15 +8,13 @@ import MaterialIcon from "../components/MaterialIcon"
 
 const Content = styled.div`
   padding: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
 `
-const Left = styled.div`
-  float: left;
-  width: 50%;
-`
-const Right = styled.div`
-  float: right;
-  margin-right: 10%;
-`
+const Left = styled.div``
+const Right = styled.div``
 const Title = styled.h1`
   font-size: 3em;
 `
@@ -44,6 +42,13 @@ const DetailText = styled.p`
   font-size: 12px;
   line-height: 8px;
 `
+
+const Image = styled.img`
+  @media (max-width: 850px) {
+    display: none;
+  }
+`
+
 const Button = styled.button`
   background-color: #0c81f6;
   border-radius: 8px;
@@ -83,9 +88,10 @@ class Index extends React.Component {
           <Left>
             <Title>Insurance as you imagine it.</Title>
             <Text>
-              You wonder why insurance must be so complicated? We too! Matiive
-              is your first fully digital insurance that really makes your life
-              easier!
+              You wonder why insurance must be so complicated? <br />
+              We too! Matiive is your first fully digital insurance that really{" "}
+              <br />
+              makes your life easier!
             </Text>
             <Left>
               <DetailContainer>
@@ -124,7 +130,7 @@ class Index extends React.Component {
             </OutboundLink>
           </Left>
           <Right>
-            <img src={"titleimage.png"} alt="Title" />
+            <Image src={"titleimage.png"} alt="Title" />
           </Right>
         </Content>
       </div>

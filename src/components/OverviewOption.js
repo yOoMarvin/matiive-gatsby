@@ -3,8 +3,15 @@ import styled from "styled-components"
 
 const Container = styled.div`
   background-repeat: no-repeat;
-  width: 430px;
+  //width: 430px;
   height: 545px;
+
+  border-radius: 15px;
+
+  @media (max-width: 430px) {
+    height: auto;
+    width: 300px;
+  }
 `
 const Text = styled.div`
   width: 350px;
@@ -13,6 +20,10 @@ const Text = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+
+  @media (max-width: 430px) {
+    width: 200px;
+  }
 `
 const Button = styled.button`
   background-color: #0c81f6;
@@ -20,10 +31,11 @@ const Button = styled.button`
   padding: 50px;
   padding-top: 10px;
   padding-bottom: 10px;
+  margin-bottom: 5em;
   border: none;
   color: white;
   font-size: 14px;
-  margin-top: 50px;
+  margin-top: 1em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   &:hover {
     cursor: pointer;

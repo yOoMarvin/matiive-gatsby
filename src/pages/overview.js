@@ -8,6 +8,7 @@ const Content = styled.div`
   padding: 15px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
 `
 

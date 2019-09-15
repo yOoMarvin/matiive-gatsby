@@ -30,7 +30,7 @@ const Container = styled.div`
 
 const Title = styled.h1`
   color: white;
-  font-size: 48px;
+  font-size: 3em;
   line-height: 0px;
 `
 const Description = styled.div`

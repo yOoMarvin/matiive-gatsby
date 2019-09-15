@@ -13,6 +13,10 @@ const Container = styled.div`
   padding: 1em 1em 1.5em 1em;
   width: 22em;
   margin-bottom: 3em;
+
+  @media (max-width: 440px) {
+    width: 15em;
+  }
 `
 const Title = styled.h3`
   line-height: 0;

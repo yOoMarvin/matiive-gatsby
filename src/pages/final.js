@@ -12,12 +12,16 @@ const Content = styled.div`
 const Left = styled.div`
   display: flex;
   flex-direction: column;
-  width: 33%;
 `
 const FormGroup = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
+  width: 20em;
+
+  @media (max-width: 850px) {
+    width: 15em;
+  }
 `
 const Input = styled.input`
   border: none;
@@ -26,8 +30,13 @@ const Input = styled.input`
   padding: 5px 0px 5px;
 `
 const Title = styled.h1`
-  font-size: 48px;
+  font-size: 3em;
   text-align: center;
+`
+const Image = styled.img`
+  @media (max-width: 850px) {
+    display: none;
+  }
 `
 const Button = styled.button`
   background-color: #0c81f6;
@@ -76,7 +85,7 @@ class Final extends React.Component {
             </form>
           </Left>
           <div>
-            <img src="/final.png" alt="confetti" />
+            <Image src="/final.png" alt="confetti" />
           </div>
         </Content>
       </div>
