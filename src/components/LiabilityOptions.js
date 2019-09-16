@@ -22,18 +22,34 @@ class LiabilityOptions extends React.Component {
     return (
       <Container>
         <Nudge>
-          {this.props.userData.person === "single" ? <LiabilityNudge /> : null}
-          <TarifOption
-            image="/liability-basic.png"
-            title="Economy Class"
-            subtitle="matiive basic"
-            row1="Insurance Sum € 5 Mio."
-            row2="Loss of private keys - 20.000€"
-            row3="Construction work - 50.000€"
-            row4="Deposit payment abroad - 50.000€"
-            price="3,50 €"
-            linkparameter="option=liability-basic&nudge=true"
-          />
+          {this.props.userData.person === "single" ? (
+            <div>
+              <LiabilityNudge />
+              <TarifOption
+                image="/liability-basic.png"
+                title="Economy Class"
+                subtitle="matiive basic"
+                row1="Insurance Sum € 5 Mio."
+                row2="Loss of private keys - 20.000€"
+                row3="Construction work - 50.000€"
+                row4="Deposit payment abroad - 50.000€"
+                price="3,50 €"
+                linkparameter="option=liability-basic&nudge=true&nudge-option=true"
+              />
+            </div>
+          ) : (
+            <TarifOption
+              image="/liability-basic.png"
+              title="Economy Class"
+              subtitle="matiive basic"
+              row1="Insurance Sum € 5 Mio."
+              row2="Loss of private keys - 20.000€"
+              row3="Construction work - 50.000€"
+              row4="Deposit payment abroad - 50.000€"
+              price="3,50 €"
+              linkparameter="option=liability-basic&nudge=true&nudge-option=false"
+            />
+          )}
         </Nudge>
         <Nudge>
           <TarifOption
@@ -46,24 +62,42 @@ class LiabilityOptions extends React.Component {
             row4="Deposit payment abroad - 100.000€"
             row5="co-insured children - 15.000€"
             price="4,70 €"
-            linkparameter="option=liability-comfort&nudge=true"
+            linkparameter="option=liability-comfort&nudge=true&nudge-option=false"
           />
         </Nudge>
         <Nudge>
-          {this.props.userData.person === "family" ? <LiabilityNudge /> : null}
-          <TarifOption
-            image="/liability-top.png"
-            title="First Class"
-            subtitle="matiive top"
-            row1="Insurance Sum € 50 Mio."
-            row2="Loss of private keys - 50.000€"
-            row3="Construction work - 150.000€"
-            row4="Deposit payment abroad - 150.000€"
-            row5="co-insured children - 50.000€"
-            row6="Damage to foreign things - 30.000€"
-            price="6,20 €"
-            linkparameter="option=liability-top&nudge=true"
-          />
+          {this.props.userData.person === "family" ? (
+            <div>
+              <LiabilityNudge />
+              <TarifOption
+                image="/liability-top.png"
+                title="First Class"
+                subtitle="matiive top"
+                row1="Insurance Sum € 50 Mio."
+                row2="Loss of private keys - 50.000€"
+                row3="Construction work - 150.000€"
+                row4="Deposit payment abroad - 150.000€"
+                row5="co-insured children - 50.000€"
+                row6="Damage to foreign things - 30.000€"
+                price="6,20 €"
+                linkparameter="option=liability-top&nudge=true&nudge-option=true"
+              />
+            </div>
+          ) : (
+            <TarifOption
+              image="/liability-top.png"
+              title="First Class"
+              subtitle="matiive top"
+              row1="Insurance Sum € 50 Mio."
+              row2="Loss of private keys - 50.000€"
+              row3="Construction work - 150.000€"
+              row4="Deposit payment abroad - 150.000€"
+              row5="co-insured children - 50.000€"
+              row6="Damage to foreign things - 30.000€"
+              price="6,20 €"
+              linkparameter="option=liability-top&nudge=true&nudge-option=false"
+            />
+          )}
         </Nudge>
       </Container>
     )
