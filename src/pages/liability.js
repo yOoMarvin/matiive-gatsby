@@ -50,11 +50,13 @@ class Liability extends React.Component {
               Our private liability insurnace at a glance. <br />
               Excellent protection. Suitable for you.
             </Title>
+            {/*
             <LiabilityData callbackFromParent={this.myCallback} />
             <h4 style={{ textAlign: "center", marginBottom: "2em" }}>
               Based on your data, our algorithms will give a recommendation for
               your best coverage
             </h4>
+            */}
             <LiabilityOptions userData={this.state} ref="liability-options" />
           </div>
         </Page>

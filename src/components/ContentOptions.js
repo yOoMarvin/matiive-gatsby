@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 
 import TarifOption from "./TarifOption"
-import ContentNudge from "./ContentNudge"
 
 const Container = styled.div`
   display: flex;
@@ -28,7 +27,7 @@ class ContentOptions extends React.Component {
           row1="Elementary damages"
           row2="Burglary and robbery"
           price="7,50 €"
-          linkparameter="option=contents-basic&display-nudge=true&nudge-option=false"
+          linkparameter="option=contents-basic&nudge=false"
         />
         <TarifOption
           image="/contents-comfort.png"
@@ -39,10 +38,12 @@ class ContentOptions extends React.Component {
           row3="Overvoltage damage"
           row4="Bicycle theft up to 500 €"
           price="9,70 €"
-          linkparameter="option=contents-comfort&display-nudge=true&nudge-option=false"
+          linkparameter="option=contents-comfort&nudge=false"
         />
         <Nudge>
-          <ContentNudge />
+          {
+            //<ContentNudge />
+          }
 
           <TarifOption
             image="/contents-top.png"
@@ -56,7 +57,7 @@ class ContentOptions extends React.Component {
             row6="Simple theft up to 2000 €"
             row7="Fraud in online banking up to 1000 €"
             price="14,20 €"
-            linkparameter="option=contents-top&display-nudge=true&nudge-option=true"
+            linkparameter="option=contents-top&nudge=false"
           />
         </Nudge>
       </Container>

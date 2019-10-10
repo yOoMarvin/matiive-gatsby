@@ -23,23 +23,6 @@ class CarOptions extends React.Component {
   render() {
     return (
       <div>
-        <Testimonials>
-          <Testimonial
-            description="I am so glad that I had the extra support. I stopped in the middle of a country road and I can tell you: Without the support of matiive, I would certainly still be there today!"
-            avatar="/paul.png"
-            avatarName="Paul, 32"
-          />
-          <Testimonial
-            description="Sometimes it is just so annoying to discuss with workshops and to take care of everything. Thanks to the great partner garages everything went smoothly and I saved a lot of time and frustration"
-            avatar="/lena.png"
-            avatarName="Lena, 27"
-          />
-          <Testimonial
-            description="My car was stolen when I was shopping. Since I live outside the city I am very dependent on the car. With the support of matiive I was able to quickly get a rental car and handle the entire story quickly"
-            avatar="/luise.png"
-            avatarName="Luise, 29"
-          />
-        </Testimonials>
         <Container>
           <TarifOption
             image="/liability-basic.png"
@@ -48,7 +31,7 @@ class CarOptions extends React.Component {
             row1="€ 100 Mio. coverage"
             row2="Theft"
             price="17,50 €"
-            linkparameter="option=car-basic&display-nudge=true&nudge-option=false"
+            linkparameter="option=car-basic&nudge=false"
           />
           <TarifOption
             image="/liability-comfort.png"
@@ -60,7 +43,7 @@ class CarOptions extends React.Component {
             row4="Glass breakage"
             row5="Exchange of lock mechanism"
             price="21,60 €"
-            linkparameter="option=car-comfort&display-nudge=true&nudge-option=false"
+            linkparameter="option=car-comfort&nudge=false"
           />
 
           <TarifOption
@@ -75,7 +58,7 @@ class CarOptions extends React.Component {
             row6="Elementary damages"
             row7="Coverage of additional parts"
             price="38,20 €"
-            linkparameter="option=car-top&display-nudge=true&nudge-option=true"
+            linkparameter="option=car-top&nudge=false"
           />
         </Container>
       </div>
