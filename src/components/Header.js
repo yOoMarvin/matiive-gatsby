@@ -45,6 +45,7 @@ class Header extends React.Component {
           <Right>
             <HeaderLink href="/liability">Liability</HeaderLink>
             <HeaderLink href="/contents">Contents</HeaderLink>
+            <HeaderLink href="/car">Car</HeaderLink>
           </Right>
         </Container>
       </MyHeader>
