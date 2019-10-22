@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Header from "../components/Header"
 import ProductInfo from "../components/ProductInfo"
 import ContentOptions from "../components/ContentOptions"
+import ContentsAccordion from "../components/ContentsAccordion"
 
 const Page = styled.div`
   display: flex;
@@ -40,6 +41,7 @@ class Contents extends React.Component {
               Our contents insurnace at a glance. <br />
               Excellent protection. Suitable for you.
             </Title>
+            <ContentsAccordion />
             <ContentOptions />
           </div>
         </Page>

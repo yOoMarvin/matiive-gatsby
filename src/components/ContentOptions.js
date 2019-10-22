@@ -41,24 +41,21 @@ class ContentOptions extends React.Component {
           price="9,70 €"
           linkparameter="option=contents-comfort&display-nudge=true&nudge-option=false"
         />
-        <Nudge>
-          <ContentNudge />
 
-          <TarifOption
-            image="/contents-top.png"
-            title="First Class"
-            subtitle="matiive top"
-            row1="Elementary damages"
-            row2="Burglary and robbery"
-            row3="Overvoltage damage"
-            row4="Bicycle theft up to 1000 €"
-            row5="Costs for data recovery up to 2500 €"
-            row6="Simple theft up to 2000 €"
-            row7="Fraud in online banking up to 1000 €"
-            price="14,20 €"
-            linkparameter="option=contents-top&display-nudge=true&nudge-option=true"
-          />
-        </Nudge>
+        <TarifOption
+          image="/contents-top.png"
+          title="First Class"
+          subtitle="matiive top"
+          row1="Elementary damages"
+          row2="Burglary and robbery"
+          row3="Overvoltage damage"
+          row4="Bicycle theft up to 1000 €"
+          row5="Costs for data recovery up to 2500 €"
+          row6="Simple theft up to 2000 €"
+          row7="Fraud in online banking up to 1000 €"
+          price="14,20 €"
+          linkparameter="option=contents-top&display-nudge=true&nudge-option=true"
+        />
       </Container>
     )
   }
