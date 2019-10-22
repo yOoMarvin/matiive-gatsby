@@ -4,7 +4,6 @@ import styled from "styled-components"
 import Header from "../components/Header"
 import ProductInfo from "../components/ProductInfo"
 import LiabilityOptions from "../components/LiabilityOptions"
-import LiabilityData from "../components/LiabilityData"
 import LiabilityAccordion from "../components/LiabilityAccordion"
 
 const Page = styled.div`
@@ -20,6 +19,15 @@ const Title = styled.h1`
 `
 
 class Liability extends React.Component {
+  componentDidMount() {
+    window.addEventListener("beforeunload", event => {
+      // Cancel the event as stated by the standard.
+      event.preventDefault()
+      alert("dont't leave")
+      // Chrome requires returnValue to be set.
+      event.returnValue = ""
+    })
+  }
   render() {
     return (
       <div>
