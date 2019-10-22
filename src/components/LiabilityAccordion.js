@@ -7,7 +7,7 @@ class LiabilityAccordion extends React.Component {
       <div className="collapsibleWrapper">
         <Collapsible trigger="Fire 🔥">
           <p>
-            Due to a stove that has not been switched off, a fire in a rented
+            Due to a stove that has not been switched off, a fire in your rented
             apartment will burn, seriously damaging the entire apartment. The
             landlord of the apartment has a building insurance, which pays part
             of the damage. Now, both the landlord and the building insurance
@@ -24,41 +24,40 @@ class LiabilityAccordion extends React.Component {
         </Collapsible>
         <Collapsible trigger="Crash 💥">
           <p>
-            A customer of matiive bumps into a pedestrian while cycling. He
-            suffers severe injuries from the collision. The pedestrian demands
-            compensation for the damage incurred: compensation for pain, pension
-            payments, loss of wages, costs for a nanny.
+            You bump into a pedestrian while cycling. He suffers severe injuries
+            from the collision. The pedestrian demands compensation for the
+            damage incurred: compensation for pain, pension payments, loss of
+            wages, costs for a nanny.
           </p>
           <p>The loss amount is 30,000 EUR.</p>
           <p>
-            Matiive assumes the costs completely. Protect yourself from everyday
+            We cover the costs completely. Protect yourself from everyday
             liability risks!
           </p>
         </Collapsible>
         <Collapsible trigger="Complacency damage 🙋‍♂️">
           <p>
-            A customer of matiive helps his neighbor to carry his new flat
-            screen TV into the house. The TV slips out of his hand and the
-            device just bought breaks.
+            You help his neighbor to carry his new flat screen TV into the
+            house. The TV slips out of his hand and the device just bought
+            breaks.
           </p>
           <p>The loss amount is 1,100 EUR.</p>
           <p>
             So that neighborly or friendly relationships are not disturbed
-            sustainably, the private liability insurance of matiive is
-            recommended. We take over the complete damage.
+            sustainably, our private liability insurance is recommended. We take
+            over the complete damage.
           </p>
         </Collapsible>
         <Collapsible trigger="Damage in the supermarket 🛒">
           <p>
-            In the supermarket, a customer of matiive accidentally comes with
-            his shopping cart against a wine rack. Unfortunately, several
-            bottles of quality wine fall off the shelf and crash on the floor.
+            In the supermarket, you accidentally roll your shopping cart against
+            a wine rack. Unfortunately, several bottles of quality wine fall off
+            the shelf and crash on the floor.
           </p>
           <p>The loss amount is 250 EUR.</p>
           <p>
-            With matiive's private liability insurance, you can protect yourself
-            against damage caused by everyday mishaps - and that for a small
-            price!
+            With our private liability insurance, you can protect yourself
+            against damage caused by everyday mishaps!
           </p>
         </Collapsible>
         <Collapsible trigger="Loss of keys 🔑">
@@ -70,9 +69,9 @@ class LiabilityAccordion extends React.Component {
           </p>
           <p>The loss amount is 2,500 EUR.</p>
           <p>
-            In this case, matiive's private liability insurance covers the
-            entire damage. Now take out the private liability insurance, so that
-            a small mishap no financial burden.
+            In this case, our private liability insurance covers the entire
+            damage. Now take out the private liability insurance, so that a
+            small mishap no financial burden.
           </p>
         </Collapsible>
       </div>
