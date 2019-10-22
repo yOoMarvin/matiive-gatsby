@@ -30,12 +30,14 @@ class Overview extends React.Component {
             title="Contents"
             text="Dangers such as fire or a burst pipe can cause considerable harm to your belongings. Protect your property with matiive home insurance."
           />
+          {/* Not needed for this nudging test 
           <OverviewOption
             background="/car-dark.png"
             link="/car"
             title="Car"
             text="Everything you need to stay mobile. Protect your car against accidents and other damages like theft or elementary damages "
           />
+          */}
         </Content>
       </div>
     )

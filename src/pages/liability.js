@@ -5,6 +5,7 @@ import Header from "../components/Header"
 import ProductInfo from "../components/ProductInfo"
 import LiabilityOptions from "../components/LiabilityOptions"
 import LiabilityData from "../components/LiabilityData"
+import LiabilityAccordion from "../components/LiabilityAccordion"
 
 const Page = styled.div`
   display: flex;
@@ -19,16 +20,6 @@ const Title = styled.h1`
 `
 
 class Liability extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      person: "family",
-      living: "property",
-    }
-  }
-  myCallback = dataFromChild => {
-    this.setState(dataFromChild)
-  }
   render() {
     return (
       <div>
@@ -50,12 +41,8 @@ class Liability extends React.Component {
               Our private liability insurnace at a glance. <br />
               Excellent protection. Suitable for you.
             </Title>
-            <LiabilityData callbackFromParent={this.myCallback} />
-            <h4 style={{ textAlign: "center", marginBottom: "2em" }}>
-              Based on your data, our algorithms will give a recommendation for
-              your best coverage
-            </h4>
-            <LiabilityOptions userData={this.state} ref="liability-options" />
+            <LiabilityAccordion />
+            <LiabilityOptions ref="liability-options" />
           </div>
         </Page>
       </div>

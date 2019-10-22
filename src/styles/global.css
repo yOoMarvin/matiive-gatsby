@@ -19,10 +19,79 @@ a {
   color: #5a667f;
 }
 p {
-  color: #5a667f;
+  color: #0f0f0f;
 }
 
 .material-icons {
   font-family: "Material Icons";
   color: #727272;
+}
+
+/* Style for collapsible component */
+
+@import url("https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css");
+
+.Collapsible {
+  background-color: white;
+  max-width: 550px;
+}
+
+.collapsibleWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+/*The content within the collaspable area*/
+.Collapsible__contentInner {
+  padding: 8px;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  border-top: 0;
+}
+
+.Collapsible__contentInner p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.Collapsible__contentInner:last-child {
+  margin-bottom: 0;
+}
+
+/*The link which when clicked opens the collapsable area*/
+.Collapsible__trigger {
+  display: block;
+  font-weight: 600;
+  text-decoration: none;
+  color: grey;
+  position: relative;
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 16px 8px 16px 8px;
+  background: #0c81f6;
+  color: white;
+  font-size: 18px;
+}
+
+.Collapsible__trigger:after {
+  font-family: "FontAwesome";
+  content: "\f107";
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  display: block;
+  transition: transform 300ms;
+}
+
+.Collapsible__trigger.is-open:after {
+  transform: rotateZ(180deg);
+}
+
+.Collapsible__trigger.is-disabled {
+  opacity: 0.5;
+  background-color: grey;
 }
