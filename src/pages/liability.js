@@ -5,6 +5,7 @@ import Header from "../components/Header"
 import ProductInfo from "../components/ProductInfo"
 import LiabilityOptions from "../components/LiabilityOptions"
 import LiabilityAccordion from "../components/LiabilityAccordion"
+import CustomModal from "../components/CustomModal"
 
 const Page = styled.div`
   display: flex;
@@ -20,18 +21,20 @@ const Title = styled.h1`
 
 class Liability extends React.Component {
   componentDidMount() {
-    window.addEventListener("beforeunload", event => {
-      // Cancel the event as stated by the standard.
-      event.preventDefault()
-      alert("dont't leave")
-      // Chrome requires returnValue to be set.
-      event.returnValue = ""
-    })
+    //   window.addEventListener("beforeunload", event => {
+    //     // Cancel the event as stated by the standard.
+    //     event.preventDefault()
+    //     alert("dont't leave")
+    //     // Chrome requires returnValue to be set.
+    //     event.returnValue = ""
+    //   })
   }
+
   render() {
     return (
       <div>
         <Header />
+        <CustomModal />
         <Page>
           <ProductInfo
             title="Covered. For all cases."
