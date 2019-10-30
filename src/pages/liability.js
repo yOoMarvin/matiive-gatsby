@@ -1,11 +1,11 @@
 import React from "react"
 import styled from "styled-components"
+import Modal from "react-modal"
 
 import Header from "../components/Header"
 import ProductInfo from "../components/ProductInfo"
 import LiabilityOptions from "../components/LiabilityOptions"
 import LiabilityAccordion from "../components/LiabilityAccordion"
-import CustomModal from "../components/CustomModal"
 
 const Page = styled.div`
   display: flex;
@@ -20,21 +20,47 @@ const Title = styled.h1`
 `
 
 class Liability extends React.Component {
-  componentDidMount() {
-    //   window.addEventListener("beforeunload", event => {
-    //     // Cancel the event as stated by the standard.
-    //     event.preventDefault()
-    //     alert("dont't leave")
-    //     // Chrome requires returnValue to be set.
-    //     event.returnValue = ""
-    //   })
+  constructor() {
+    super()
+
+    this.state = {
+      modalIsOpen: false,
+      clicks: 0,
+    }
+
+    this.openModal = this.openModal.bind(this)
+    this.afterOpenModal = this.afterOpenModal.bind(this)
+    this.closeModal = this.closeModal.bind(this)
+  }
+
+  openModal() {
+    this.setState({ modalIsOpen: true })
+  }
+
+  afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    this.subtitle.style.color = "#f00"
+  }
+
+  closeModal() {
+    this.setState({ modalIsOpen: false })
   }
 
   render() {
     return (
       <div>
         <Header />
-        <CustomModal />
+        {/* TODO: show the modal in this page after, 10 clicks or 180 seconds on the page */}
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          onAfterOpen={this.afterOpenModal}
+          onRequestClose={this.closeModal}
+          contentLabel="Example Modal"
+        >
+          <h2 ref={subtitle => (this.subtitle = subtitle)}>Hello</h2>
+          <button onClick={this.closeModal}>close</button>
+          <div>I am a modal</div>
+        </Modal>
         <Page>
           <ProductInfo
             title="Covered. For all cases."

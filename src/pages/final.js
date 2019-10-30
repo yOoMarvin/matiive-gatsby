@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import Modal from "react-modal"
 
 import Header from "../components/Header"
 
@@ -53,12 +54,83 @@ const Button = styled.button`
     cursor: pointer;
   }
 `
+const ModalContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+`
+const Emojis = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap-around;
+
+  h1 {
+    padding: 8px;
+    font-size: 4.5em;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+`
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+`
 
 class Final extends React.Component {
+  constructor() {
+    super()
+
+    this.state = {
+      modalIsOpen: true,
+      clicks: 0,
+    }
+
+    this.openModal = this.openModal.bind(this)
+    this.afterOpenModal = this.afterOpenModal.bind(this)
+    this.closeModal = this.closeModal.bind(this)
+  }
+
+  openModal() {
+    this.setState({ modalIsOpen: true })
+  }
+
+  afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    this.subtitle.style.color = "#f00"
+  }
+
+  closeModal() {
+    this.setState({ modalIsOpen: false })
+  }
+
   render() {
     return (
       <div>
         <Header />
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          onRequestClose={this.closeModal}
+          contentLabel="Example Modal"
+        >
+          <ModalContainer>
+            <h2>How would you rate your experience so far?</h2>
+            <Emojis>
+              <h1 onClick={() => console.log("I'm sad")}>🙁</h1>
+              <h1 onClick={() => console.log("I'm neutral")}>😐</h1>
+              <h1 onClick={() => console.log("I'm happy")}>🙂</h1>
+            </Emojis>
+            <ButtonContainer>
+              <Button onClick={this.closeModal}>close</Button>
+              <Button onClick={() => console.log(this.props.location.search)}>
+                Log that stuff!
+              </Button>
+            </ButtonContainer>
+          </ModalContainer>
+        </Modal>
         <Title>Thank you for your interest</Title>
         <Content>
           <Left>
